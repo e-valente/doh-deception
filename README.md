@@ -1,7 +1,3 @@
-Sure, here's an improved version of the README content for your repository:
-
----
-
 # DoH-Deception
 
 ## Description
