@@ -1,5 +1,17 @@
 # BsidesLV - Demo
 
+## Generic Algorithm to attack any model using Zeroth Order Optimization (ZOO) 
+
+1. Choose the tool to generate malicious traffic
+- Example: doh tunnel tools: dnstt, iodine, doh-proxy, etc
+2. Generate malicious feature instances (ex: pcap)
+- You can use tcpdump, wireshark, scapy (python library), or dohlyzer.
+3. Choose the features to attack (best features are you can change like packet size and time)
+4. Set up the limits of chosen feature for attacking (ex: positive numbers to time or 30\% for packet size)
+5. Attack
+6. Get the most modified features (ex: 4 most)
+7. Use the gotten numbers to set up your tool
+
 ## Demo1 - DoH tunnel Basics - 101
 In this demo, we will show how to create a DoH tunnel using dnstt on AWS and how to use it to tunnel DNS traffic over HTTPS.
 
@@ -95,19 +107,21 @@ We use auxiliary scripts ([generate-tunnel-data](./tunel-dnstt/generate-tunnel-d
 
 ![Demo Target Zoo Attack](../img/demo_target_zoo.png)
 
-## Feature extractor 
+### Steps
+
+1. Run steps 1-6 from [Demo 1](#demo1---doh-tunnel-basics---101).
+Note: Do not create the backend application on the client side.
+2. Run [Target Zoo Attack](#zoo-target-attack-) - The steps are the same as showed in [Demo 2](#demo-2---attacking-doh-tunnel-detection-models-).
+3. On the local machine, start the NIDS script, specifying the interface (-n), the model path a (-m) to save the captured data (-c).
 
 ```shell
-# meter module from dohlyzer
- python dohlyzer.py -n eno1 -c  ./output.csv
-
+cd feature-extractor/meter
+./nids-ml.py -n <INTERFACE> --enable-nids -m ../../bsides-experiments/ -c /tmp/captured.csv
 ```
 
-Note: Verify flow_session.py to change to NRT csv generation.
+4. Choose the (best) features you want to reproduce based on the two last [notebook](./bsides-experiments/Target_ZooDoH_Attack_GB.ipynb) cells 
+and replace the values on the [generate-attacked-tunnel-data](./tunel-dnstt/generate-attacked-tunnel.py) script.
 
-- Run the command line
-```shell
- ./dohlyzer.py -m ../../../sbseg-experiments/models/ -s o
-
-```
+5. Run the [generate-attacked-tunnel-data](./tunel-dnstt/generate-attacked-tunnel.py) script to send the adversarial examples to the NIDS.
+Tip: You can run the benign traffic script ([generate-tunnel-data](./tunel-dnstt/generate-tunnel-data.py)) to compare the results.
 
