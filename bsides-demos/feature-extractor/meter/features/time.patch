@@ -1,0 +1,10 @@
+--- packet_time.py      2023-12-19 06:53:15.148255511 -0800
++++ packet_time.py.new  2023-12-19 06:54:03.259084221 -0800
+@@ -48,7 +48,7 @@
+             String of Date and time.
+
+         """
+-        time = self.flow.packets[0][0].time
++        time = float(self.flow.packets[0][0].time)
+         date_time = datetime.fromtimestamp(time).strftime('%Y-%m-%d %H:%M:%S')
+         return date_time
