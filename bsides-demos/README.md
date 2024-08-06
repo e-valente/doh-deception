@@ -112,7 +112,7 @@ We use auxiliary scripts ([generate-tunnel-data](./tunel-dnstt/generate-tunnel-d
 1. Run steps 1-6 from [Demo 1](#demo1---doh-tunnel-basics---101).
 Note: Do not create the backend application on the client side.
 2. Run [Target Zoo Attack](#zoo-target-attack-) - The steps are the same as showed in [Demo 2](#demo-2---attacking-doh-tunnel-detection-models-).
-3. On the local machine, start the NIDS script, specifying the interface (-n), the model path a (-m) to save the captured data (-c).
+3. On the local machine, start the NIDS script, specifying the interface (-n), the model path (-m), and a path to save the captured data (-c).
 
 ```shell
 cd feature-extractor/meter
