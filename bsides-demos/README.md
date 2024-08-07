@@ -11,7 +11,7 @@ etc).
 5. Execute the Target Zoo Attack.
 6. Identify the most altered features (e.g., top 4).
 7. Apply these values to configure your tool. Adjust the feature instances by factors
-like 10 or 100 according to the values you got (i.e., You do not need to put the
+like 10, 100, 1000, etc, according to the values you got (i.e., You do not need to put the
 exact values; the magnitude is what matters). Begin by modifying one feature. If
 the model still detects it as malicious, gradually modify additional features until
 achieving benign predictions.
