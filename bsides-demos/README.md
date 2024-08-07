@@ -97,7 +97,8 @@ In a real-world scenario, we just need a single successful attack instance to ac
 2. Train a model: [build_model.ipynb](./bsides-experiments/build_model.ipynb)
 3. Get DoH tunnel tools feature limits: [get-doh-tunnel-tool-limits.ipynb](./bsides-experiments/get-doh-tunnel-tool-limits.ipynb)
 4. Increase/decrease the feature limits according to your needs: Edit the file `dnstt-limits-prod.csv`
-5. Choose features to attack: Edit the array `features_to_attack` on notebook `Target_ZooDoH_Attack_GB.ipynb`
+5. Choose features to attack: Edit the array `features_to_attack` on notebook `Target_ZooDoH_Attack_GB.ipynb`. 
+You can use the [feature list](./FEATURE_LIST.md) as a reference.
 6. Generate adversarial examples (attack): [Target_ZooDoH_Attack_GB.ipynb](./bsides-experiments/Target_ZooDoH_Attack_GB.ipynb)
 
 ## Demo 3 - Real world Black Box Attacking (real-world scenario)   
