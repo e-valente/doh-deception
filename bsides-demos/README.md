@@ -2,15 +2,20 @@
 
 ## Generic Algorithm to attack any model using Zeroth Order Optimization (ZOO) 
 
-1. Choose the tool to generate malicious traffic
-- Example: doh tunnel tools: dnstt, iodine, doh-proxy, etc
-2. Generate malicious feature instances (ex: pcap)
-- You can use tcpdump, wireshark, scapy (python library), or dohlyzer.
-3. Choose the features to attack (best features are you can change like packet size and time)
-4. Set up the limits of chosen feature for attacking (ex: positive numbers to time or 30\% for packet size)
-5. Attack
-6. Get the most modified features (ex: 4 most)
-7. Use the gotten numbers to set up your tool
+1. Select a tool to generate malicious traffic, e.g., dnstt, iodine, doh-proxy.
+2. Generate malicious feature instances (e.g., pcap) using tools like tcpdump,
+Wireshark, Scapy, or dohlyzer.
+3. Identify the features to attack (e.g., packet size, time).
+4. Set limits for the selected features (e.g., positive time values, 65k for packet size,
+etc).
+5. Execute the Target Zoo Attack.
+6. Identify the most altered features (e.g., top 4).
+7. Apply these values to configure your tool. Adjust the feature instances by factors
+like 10 or 100 according to the values you got (i.e., You do not need to put the
+exact values; the magnitude is what matters). Begin by modifying one feature. If
+the model still detects it as malicious, gradually modify additional features until
+achieving benign predictions.
+
 
 ## Demo1 - DoH tunnel Basics - 101
 In this demo, we will show how to create a DoH tunnel using [dnstt](https://www.bamsoftware.com/software/dnstt/) on AWS and how to use it to tunnel DNS traffic over HTTPS.
