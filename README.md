@@ -1,5 +1,7 @@
 # DoH-Deception
-[![DoH Deception](https://www.youtube.com/embed/kHSenZLXVAQ?si=HAubCly7leUEWxE8)
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/kHSenZLXVAQ/0.jpg)](https://www.youtube.com/watch?v=kHSenZLXVAQ")
+
 
 ## Description
 Welcome to the DoH-Deception project! This repository contains the demonstrations presented at BSidesLV and Defcon.
