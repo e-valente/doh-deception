@@ -2,10 +2,10 @@
 
 Welcome to the DoH-Deception project! This repository contains the demonstrations/slides presented at BSidesLV 2024 and Defcon32.
 
-## Generic Script to Attack Any ML Model Using Target Zoo Attack
-![Generic Script](./img/methodology.png)
+- Generic Script to Attack Any ML Model Using Target Zoo Attack
+![Generic Script](./img/methodology.png)    
 
-## Attacking DoH Tunnel Detection Models - using Target Zoo Attack
+- Attacking DoH Tunnel Detection Models - using Target Zoo Attack
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/kHSenZLXVAQ/0.jpg)](https://www.youtube.com/watch?v=kHSenZLXVAQ")
 
 ### Presentations
