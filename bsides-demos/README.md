@@ -1,21 +1,8 @@
 # BsidesLV - Demo
 
-## Generic Algorithm to attack any model using Zeroth Order Optimization (ZOO) 
+## Generic Algorithm to attack any model using Zeroth Order Optimization (ZOO)
 
-1. Select a tool to generate malicious traffic, e.g., dnstt, iodine, doh-proxy.
-2. Generate malicious feature instances (e.g., pcap) using tools like tcpdump,
-Wireshark, Scapy, or dohlyzer.
-3. Identify the features to attack (e.g., packet size, time).
-4. Set limits for the selected features (e.g., positive time values, 65k for packet size,
-etc).
-5. Execute the Target Zoo Attack.
-6. Identify the most altered features (e.g., top 4).
-7. Apply these values to configure your tool. Adjust the feature instances by factors
-like 10, 100, 1000, etc, according to the values you got (i.e., You do not need to put the
-exact values; the magnitude is what matters). Begin by modifying one feature. If
-the model still detects it as malicious, gradually modify additional features until
-achieving benign predictions.
-
+![Generic Script](../img/methodology.png)    
 
 ## Demo1 - DoH tunnel Basics - 101
 In this demo, we will show how to create a DoH tunnel using [dnstt](https://www.bamsoftware.com/software/dnstt/) on AWS and how to use it to tunnel DNS traffic over HTTPS.
